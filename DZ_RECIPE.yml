@@ -1,0 +1,19 @@
+dev:
+  commands:
+  - command: yarn install --frozen-lockfile
+    directory: lunasec
+    name: install cmd
+  - command: npm i
+    directory: lunasec/docs
+    name: install cmd
+  - command: go mod download
+    directory: lunasec/go
+    name: install cmd
+  name: ""
+  packages:
+  - nixpkgs.docker
+  - nixpkgs.go
+  - nixpkgs.nodePackages.yarn
+  - nixpkgs.nodejs_18
+  repos:
+  - https://github.com/cmiller01/lunasec
